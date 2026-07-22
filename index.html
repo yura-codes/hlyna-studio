@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HLYNA — керамічна майстерня та повільна кава у Чернівцях</title>
+<meta name="description" content="HLYNA — незалежна керамічна майстерня і повільна кава-бар у Чернівцях. Майстерні з ліплення та гончарного кола, кава в чашках ручної роботи. Концепт-проєкт для портфоліо.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F2EEE5'/%3E%3Cpath d='M16 5c-5 0-8 3.4-8 8.6 0 6.4 3.4 13.4 8 13.4s8-7 8-13.4C24 8.4 21 5 16 5Z' fill='%23B65338'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400;1,7..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти до змісту</a>
+
+<header class="site-header" id="siteHeader">
+	<div class="wrap header-inner">
+		<a class="wordmark" href="#top" aria-label="HLYNA — на початок сторінки">
+			<span class="wordmark-name serif">HLYNA</span>
+			<span class="wordmark-sub">кераміка&nbsp;·&nbsp;кава&nbsp;·&nbsp;Чернівці</span>
+		</a>
+		<nav class="main-nav" aria-label="Основна навігація">
+			<ul>
+				<li><a href="#maisterni" data-navlink>Майстерні</a></li>
+				<li><a href="#rozklad" data-navlink>Розклад</a></li>
+				<li><a href="#prostir" data-navlink>Простір</a></li>
+				<li><a href="#faq" data-navlink>FAQ</a></li>
+				<li><a href="#kontakty" data-navlink>Контакти</a></li>
+			</ul>
+		</nav>
+		<div class="header-actions">
+			<button type="button" class="my-booking-link" id="myBookingBtn">
+				<span class="mb-dot" id="myBookingDot" hidden aria-hidden="true"></span>Мій запис
+			</button>
+			<button type="button" class="btn btn-primary btn-book" id="headerBookBtn">Забронювати</button>
+			<button type="button" class="burger" id="burgerBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Відкрити меню">
+				<span class="burger-line"></span><span class="burger-line"></span>
+			</button>
+		</div>
+	</div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+	<nav aria-label="Мобільна навігація">
+		<ul>
+			<li><a href="#maisterni" data-mnav><span class="mnav-num">01</span>Майстерні</a></li>
+			<li><a href="#rozklad" data-mnav><span class="mnav-num">02</span>Розклад</a></li>
+			<li><a href="#prostir" data-mnav><span class="mnav-num">03</span>Простір</a></li>
+			<li><a href="#kava" data-mnav><span class="mnav-num">04</span>Кава</a></li>
+			<li><a href="#faq" data-mnav><span class="mnav-num">05</span>FAQ</a></li>
+			<li><a href="#kontakty" data-mnav><span class="mnav-num">06</span>Контакти</a></li>
+		</ul>
+	</nav>
+	<div class="mobile-menu-foot">
+		<button type="button" class="btn btn-primary btn-wide" id="mobileBookBtn">Забронювати майстерню</button>
+		<button type="button" class="btn btn-ghost btn-wide" id="mobileMyBookingBtn">Мій запис</button>
+		<p class="mobile-menu-contact">вул. О. Кобилянської, 19 · <a href="tel:+380685120437">+38 068 512 04 37</a></p>
+	</div>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero grain" id="top">
+	<div class="wrap hero-grid">
+		<div class="hero-text">
+			<p class="hero-kicker">Керамічна майстерня та повільна кава — Чернівці</p>
+			<h1 class="hero-title serif">Місце, де глина стає вашою річчю.</h1>
+			<p class="hero-lead">Приходьте зліпити чашку чи тарілку, випийте кави без поспіху — а за два‑три тижні повертайтеся по готову випалену річ. Досвід не потрібен.</p>
+			<div class="hero-cta">
+				<a class="btn btn-primary" href="#maisterni">Обрати майстерню</a>
+				<a class="btn btn-ghost" href="#kava">Зайти на каву</a>
+			</div>
+			<dl class="hero-info">
+				<div class="hero-info-item">
+					<dt>Сьогодні</dt>
+					<dd id="todayStatus">Вт–Пт 10:00–20:00, Сб–Нд 11:00–19:00</dd>
+				</div>
+				<div class="hero-info-item">
+					<dt>Найближча майстерня</dt>
+					<dd id="nextWorkshop">дивіться розклад нижче</dd>
+				</div>
+			</dl>
+			<p class="hero-scroll" aria-hidden="true">Гортайте <span class="hero-scroll-arrow">↓</span></p>
+		</div>
+		<div class="hero-media">
+			<figure>
+				<img src="assets/img/hero.jpg" alt="Руки майстра формують чашку з теракотової глини на деревʼяному столі біля вікна" width="896" height="1200" fetchpriority="high">
+				<figcaption class="hero-caption">Ранкова зміна в студії.<br>Теракотова глина, форма для чашки.</figcaption>
+			</figure>
+		</div>
+	</div>
+</section>
+
+<!-- ============ 01 МАЙСТЕРНІ ============ -->
+<section class="section" id="maisterni" aria-labelledby="maisterniTitle">
+	<div class="wrap">
+		<header class="sec-head">
+			<p class="sec-label">01 / Майстерні</p>
+			<div class="sec-head-row">
+				<h2 class="sec-title serif" id="maisterniTitle">Найближчі майстерні</h2>
+				<div class="filters" role="group" aria-label="Фільтр майстерень за форматом">
+					<button type="button" class="chip is-active" data-filter="all" aria-pressed="true">Усі</button>
+					<button type="button" class="chip" data-filter="beginner" aria-pressed="false">Для початківців</button>
+					<button type="button" class="chip" data-filter="pair" aria-pressed="false">Для двох</button>
+					<button type="button" class="chip" data-filter="experienced" aria-pressed="false">З досвідом</button>
+				</div>
+			</div>
+		</header>
+
+		<div class="ws-list" id="wsList">
+			<article class="ws-row" data-level="beginner" data-ws="persha-chashka">
+				<div class="ws-media">
+					<img src="assets/img/cup.jpg" alt="Щипкова чашка з теракотової глини на підвіконні у сонячному світлі" loading="lazy" width="848" height="1264">
+				</div>
+				<div class="ws-body">
+					<p class="ws-num serif" aria-hidden="true">01</p>
+					<h3 class="ws-title serif">Перша чашка</h3>
+					<p class="ws-meta">ручне ліплення · 2,5 години · без досвіду · до 8 людей</p>
+					<p class="ws-desc">Класика студії. Технікою щипкового ліплення ви зробите чашку, з якої справді питимете каву. Покажемо, як тримати форму, вирівняти вінця — і де доречно лишити слід пальця.</p>
+					<p class="ws-dates" data-ws-dates="persha-chashka"></p>
+					<div class="ws-foot">
+						<p class="ws-price"><strong>890 ₴</strong> <span>/ особа</span></p>
+						<div class="ws-actions">
+							<button type="button" class="btn btn-line" data-details="persha-chashka">Деталі</button>
+							<button type="button" class="btn btn-ghost" data-book="persha-chashka">Забронювати</button>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article class="ws-row" data-level="beginner" data-ws="honcharne-kolo">
+				<div class="ws-media">
+					<img src="assets/img/wheel.jpg" alt="Руки центрують вологу глину на гончарному колі" loading="lazy" width="1200" height="896">
+				</div>
+				<div class="ws-body">
+					<p class="ws-num serif" aria-hidden="true">02</p>
+					<h3 class="ws-title serif">Гончарне коло</h3>
+					<p class="ws-meta">перше знайомство · 2 години · без досвіду · до 4 людей</p>
+					<p class="ws-desc">Дві години за колом під керівництвом майстра: центрування, перший циліндр і ваша перша піала. Коло не пробачає поспіху — саме тому це найкращий спосіб уповільнитися.</p>
+					<p class="ws-dates" data-ws-dates="honcharne-kolo"></p>
+					<div class="ws-foot">
+						<p class="ws-price"><strong>1100 ₴</strong> <span>/ особа</span></p>
+						<div class="ws-actions">
+							<button type="button" class="btn btn-line" data-details="honcharne-kolo">Деталі</button>
+							<button type="button" class="btn btn-ghost" data-book="honcharne-kolo">Забронювати</button>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article class="ws-row" data-level="pair" data-ws="liplennia-dlia-dvokh">
+				<div class="ws-media">
+					<img src="assets/img/pair.jpg" alt="Двоє людей у фартухах ліплять керамічні речі за спільним столом" loading="lazy" width="1376" height="768">
+				</div>
+				<div class="ws-body">
+					<p class="ws-num serif" aria-hidden="true">03</p>
+					<h3 class="ws-title serif">Ліплення для двох</h3>
+					<p class="ws-meta">парний формат · 2,5 години · без досвіду · 2 людини за столом</p>
+					<p class="ws-desc">Формат для пар, друзів і тих, хто давно не бачився. Ви робите дві речі — наприклад, тарілку й чашку — і за три тижні забираєте їх як спільний комплект.</p>
+					<p class="ws-dates" data-ws-dates="liplennia-dlia-dvokh"></p>
+					<div class="ws-foot">
+						<p class="ws-price"><strong>1650 ₴</strong> <span>/ за двох</span></p>
+						<div class="ws-actions">
+							<button type="button" class="btn btn-line" data-details="liplennia-dlia-dvokh">Деталі</button>
+							<button type="button" class="btn btn-ghost" data-book="liplennia-dlia-dvokh">Забронювати</button>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article class="ws-row" data-level="experienced" data-ws="vilna-maisternia">
+				<div class="ws-media">
+					<img src="assets/img/table.jpg" alt="Робочий стіл майстерні з висушеними виробами та інструментами для кераміки" loading="lazy" width="1264" height="848">
+				</div>
+				<div class="ws-body">
+					<p class="ws-num serif" aria-hidden="true">04</p>
+					<h3 class="ws-title serif">Вільна майстерня</h3>
+					<p class="ws-meta">самостійна робота · 3 години · з досвідом · до 6 людей</p>
+					<p class="ws-desc">Для тих, хто вже ліпив або сидів за колом. Три години самостійної роботи: місце, глина, поливи та піч у вашому розпорядженні. Майстер поруч, але не веде заняття.</p>
+					<p class="ws-dates" data-ws-dates="vilna-maisternia"></p>
+					<div class="ws-foot">
+						<p class="ws-price"><strong>450 ₴</strong> <span>/ особа</span></p>
+						<div class="ws-actions">
+							<button type="button" class="btn btn-line" data-details="vilna-maisternia">Деталі</button>
+							<button type="button" class="btn btn-ghost" data-book="vilna-maisternia">Забронювати</button>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<div class="ws-empty" id="wsEmpty" hidden>
+			<p class="serif">За цим фільтром зараз нічого немає.</p>
+			<p>Спробуйте інший формат — або напишіть нам, і ми підкажемо, з чого почати.</p>
+			<button type="button" class="btn btn-ghost" id="wsEmptyReset">Показати всі майстерні</button>
+		</div>
+	</div>
+</section>
+
+<!-- ============ 02 ЯК УСЕ ВІДБУВАЄТЬСЯ ============ -->
+<section class="section section-process" id="protses" aria-labelledby="protsesTitle">
+	<div class="wrap process-grid">
+		<div class="process-intro">
+			<p class="sec-label">02 / Процес</p>
+			<h2 class="sec-title serif" id="protsesTitle">Як усе відбувається</h2>
+			<p class="process-note">Від грудки глини до чашки на вашій полиці минає приблизно три тижні. Більшу частину цього часу працюємо ми — ви приходите двічі.</p>
+			<figure class="process-figure">
+				<img src="assets/img/glaze.jpg" alt="Руки занурюють керамічну чашку в відро з білою поливою" loading="lazy" width="1376" height="768">
+				<figcaption>Поливання перед другим випалом — це робимо ми.</figcaption>
+			</figure>
+		</div>
+		<ol class="process-steps">
+			<li class="process-step">
+				<p class="step-num serif" aria-hidden="true">01</p>
+				<div>
+					<h3 class="step-title serif">Обираєте майстерню</h3>
+					<p>У розкладі є формати для новачків, пар і людей з досвідом. Бронюєте дату й час онлайн — або просто пишете нам в Instagram.</p>
+				</div>
+			</li>
+			<li class="process-step">
+				<p class="step-num serif" aria-hidden="true">02</p>
+				<div>
+					<h3 class="step-title serif">Працюєте з глиною</h3>
+					<p>Дві-три години за столом чи колом. Майстер підказує рівно стільки, скільки потрібно, щоб річ вийшла вашою, а не його.</p>
+				</div>
+			</li>
+			<li class="process-step">
+				<p class="step-num serif" aria-hidden="true">03</p>
+				<div>
+					<h3 class="step-title serif">Ми доводимо річ до кінця</h3>
+					<p>Виріб сохне кілька днів, проходить перший випал, вкривається поливою і випалюється вдруге — уже при 1200&nbsp;°C.</p>
+				</div>
+			</li>
+			<li class="process-step">
+				<p class="step-num serif" aria-hidden="true">04</p>
+				<div>
+					<h3 class="step-title serif">Забираєте готове</h3>
+					<p>Орієнтовно через 14–21 день пишемо, що річ можна забрати. Заодно це гарний привід зайти на каву.</p>
+				</div>
+			</li>
+		</ol>
+	</div>
+</section>
+
+<!-- ============ 03 РОЗКЛАД ============ -->
+<section class="section section-schedule grain" id="rozklad" aria-labelledby="rozkladTitle">
+	<div class="wrap">
+		<header class="sec-head">
+			<p class="sec-label">03 / Розклад</p>
+			<h2 class="sec-title serif" id="rozkladTitle">Оберіть дату і час</h2>
+		</header>
+		<div class="schedule-grid">
+			<div class="schedule-picker">
+				<fieldset class="sched-block">
+					<legend class="sched-legend">Майстерня</legend>
+					<div class="sched-ws-list" id="schedWsList" role="group" aria-label="Вибір майстерні"></div>
+				</fieldset>
+				<fieldset class="sched-block">
+					<legend class="sched-legend">Дата</legend>
+					<div class="sched-dates" id="schedDates" role="group" aria-label="Вибір дати"></div>
+				</fieldset>
+				<fieldset class="sched-block">
+					<legend class="sched-legend">Час</legend>
+					<div class="sched-times" id="schedTimes" role="group" aria-label="Вибір часу"></div>
+				</fieldset>
+				<fieldset class="sched-block">
+					<legend class="sched-legend">Учасники</legend>
+					<div class="stepper">
+						<button type="button" class="stepper-btn" id="schedMinus" aria-label="Менше учасників">−</button>
+						<span class="stepper-value" id="schedCount" aria-live="polite">1</span>
+						<button type="button" class="stepper-btn" id="schedPlus" aria-label="Більше учасників">+</button>
+						<span class="stepper-note" id="schedCountNote"></span>
+					</div>
+				</fieldset>
+			</div>
+			<aside class="schedule-summary" aria-label="Ваш вибір">
+				<h3 class="summary-title serif">Ваш вибір</h3>
+				<dl class="summary-list">
+					<div><dt>Майстерня</dt><dd id="sumWs">—</dd></div>
+					<div><dt>Дата</dt><dd id="sumDate">—</dd></div>
+					<div><dt>Час</dt><dd id="sumTime">—</dd></div>
+					<div><dt>Учасники</dt><dd id="sumCount">1</dd></div>
+				</dl>
+				<p class="summary-total"><span>Разом</span><strong id="sumTotal">—</strong></p>
+				<button type="button" class="btn btn-primary btn-wide" id="schedProceed" disabled>Перейти до бронювання</button>
+				<p class="summary-hint" id="schedHint">Оберіть майстерню, дату і час — і кнопка стане активною.</p>
+			</aside>
+		</div>
+	</div>
+</section>
+
+<!-- ============ 04 ПРОСТІР ============ -->
+<section class="section" id="prostir" aria-labelledby="prostirTitle">
+	<div class="wrap story-grid">
+		<div class="story-text">
+			<p class="sec-label">04 / Простір</p>
+			<h2 class="sec-title serif" id="prostirTitle">Майстерня, у якій пахне глиною і кавою</h2>
+			<p>HLYNA — маленька незалежна студія на першому поверсі старого будинку в центрі Чернівців. Нас четверо: двоє керамістів, бариста і піч на 1200 градусів. Ми не мережа і не франшиза — усе, що стоїть на полицях, зроблене тут, руками наших гостей або нашими.</p>
+			<p>Кав'ярня з'явилася майже випадково: чашки з першого випалу треба було з чогось пити. Тепер повільна кава — половина характеру цього місця. Сюди приходять ліпити, працювати, чекати свій випал і знайомитися: більшість наших майстрів колись самі прийшли сюди гостями.</p>
+			<blockquote class="story-quote">
+				<p>«Найкращий момент — коли людина забирає свою першу чашку й питає: „Це що, справді зробила я?" Заради цього все й починалося.»</p>
+				<footer>— Марта Гринчук, засновниця HLYNA</footer>
+			</blockquote>
+		</div>
+		<div class="story-media">
+			<figure>
+				<img src="assets/img/interior.jpg" alt="Інтер'єр студії HLYNA: високі вікна, дерев'яні столи з глиною та кавова стійка в глибині" loading="lazy" width="1600" height="900">
+				<figcaption>Ранок у студії. Ліворуч — столи для ліплення, праворуч — кавова стійка.</figcaption>
+			</figure>
+		</div>
+	</div>
+</section>
+
+<!-- ============ 05 ГАЛЕРЕЯ ============ -->
+<section class="section" id="galereia" aria-labelledby="galereiaTitle">
+	<div class="wrap">
+		<header class="sec-head">
+			<p class="sec-label">05 / Галерея</p>
+			<h2 class="sec-title serif" id="galereiaTitle">Руки, глина, речі</h2>
+		</header>
+		<div class="gallery">
+			<div class="g-item g-a">
+				<figure>
+					<button type="button" class="g-btn" data-lightbox="0" aria-label="Збільшити: формування чашки біля вікна">
+						<img src="assets/img/hero.jpg" alt="Руки формують високу посудину з теракотової глини біля вікна" loading="lazy" width="896" height="1200">
+					</button>
+					<figcaption>Ранкова зміна: форма для чашки</figcaption>
+				</figure>
+			</div>
+			<div class="g-item g-b">
+				<figure>
+					<button type="button" class="g-btn" data-lightbox="1" aria-label="Збільшити: центрування глини на колі">
+						<img src="assets/img/wheel.jpg" alt="Руки центрують вологу глину на гончарному колі" loading="lazy" width="1200" height="896">
+					</button>
+					<figcaption>Центрування — найтихіша частина заняття</figcaption>
+				</figure>
+			</div>
+			<div class="g-item g-c">
+				<figure>
+					<button type="button" class="g-btn" data-lightbox="2" aria-label="Збільшити: полиця з виробами після першого випалу">
+						<img src="assets/img/shelf.jpg" alt="Дерев'яна полиця з чашками й тарілками після першого випалу" loading="lazy" width="1200" height="896">
+					</button>
+					<figcaption>Після першого випалу, до поливи</figcaption>
+				</figure>
+			</div>
+			<div class="g-item g-d">
+				<figure>
+					<button type="button" class="g-btn" data-lightbox="3" aria-label="Збільшити: фільтр-кава в чашці ручної роботи">
+						<img src="assets/img/coffee.jpg" alt="Фільтр-каву наливають у керамічну чашку ручної роботи" loading="lazy" width="896" height="1200">
+					</button>
+					<figcaption>Фільтр дня — у чашці з цієї ж майстерні</figcaption>
+				</figure>
+			</div>
+			<div class="g-item g-e">
+				<figure>
+					<button type="button" class="g-btn" data-lightbox="4" aria-label="Збільшити: занурення чашки в поливу">
+						<img src="assets/img/glaze.jpg" alt="Руки занурюють чашку у відро з білою поливою поруч із кобальтовими пробниками" loading="lazy" width="1200" height="896">
+					</button>
+					<figcaption>Полива: біла основа, кобальтові пробники</figcaption>
+				</figure>
+			</div>
+			<div class="g-item g-f">
+				<figure>
+					<button type="button" class="g-btn" data-lightbox="5" aria-label="Збільшити: парне заняття за спільним столом">
+						<img src="assets/img/pair.jpg" alt="Двоє людей ліплять керамічні речі за спільним дерев'яним столом" loading="lazy" width="1200" height="896">
+					</button>
+					<figcaption>«Ліплення для двох», суботній вечір</figcaption>
+				</figure>
+			</div>
+			<div class="g-item g-g">
+				<figure>
+					<button type="button" class="g-btn" data-lightbox="6" aria-label="Збільшити: готова чашка на підвіконні">
+						<img src="assets/img/cup.jpg" alt="Готова щипкова чашка на підвіконні в сонячному світлі" loading="lazy" width="848" height="1264">
+					</button>
+					<figcaption>Чашка з «Першої чашки» — забрали через три тижні</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ============ 06 КАВА ============ -->
+<section class="section section-coffee grain" id="kava" aria-labelledby="kavaTitle">
+	<div class="wrap coffee-grid">
+		<div class="coffee-text">
+			<p class="sec-label">06 / Кава</p>
+			<h2 class="sec-title serif" id="kavaTitle">Повільна кава</h2>
+			<p class="coffee-intro">Коротке меню без поспіху: кілька позицій кави, трав'яний чай і два десерти від пекарні з сусіднього кварталу. Каву подаємо в чашках, зроблених тут.</p>
+			<div class="coffee-filters" role="group" aria-label="Фільтр меню">
+				<button type="button" class="chip is-active" data-menu-filter="all" aria-pressed="true">Усе</button>
+				<button type="button" class="chip" data-menu-filter="kava" aria-pressed="false">Кава</button>
+				<button type="button" class="chip" data-menu-filter="desert" aria-pressed="false">Десерти</button>
+				<button type="button" class="chip" data-menu-filter="inshe" aria-pressed="false">Інше</button>
+			</div>
+			<ul class="menu-list" id="menuList">
+				<li class="menu-item" data-cat="kava"><span class="menu-name">Еспресо</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-price">65 ₴</span></li>
+				<li class="menu-item" data-cat="kava"><span class="menu-name">Фільтр дня, V60</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-price">90 ₴</span></li>
+				<li class="menu-item" data-cat="kava"><span class="menu-name">Капучино на вівсяному</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-price">95 ₴</span></li>
+				<li class="menu-item" data-cat="desert"><span class="menu-name">Сирник із чорницею</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-price">120 ₴</span></li>
+				<li class="menu-item" data-cat="desert"><span class="menu-name">Медівник</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-price">105 ₴</span></li>
+				<li class="menu-item" data-cat="inshe"><span class="menu-name">Какао на карпатському молоці</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-price">85 ₴</span></li>
+				<li class="menu-item" data-cat="inshe"><span class="menu-name">Чай із карпатських трав</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-price">110 ₴</span></li>
+				<li class="menu-item" data-cat="inshe"><span class="menu-name">Лимонад із айвою</span><span class="menu-dots" aria-hidden="true"></span><span class="menu-price">75 ₴</span></li>
+			</ul>
+			<p class="menu-note">Чашка сподобалась? Її можна купити — спитайте бариста.</p>
+		</div>
+		<div class="coffee-media">
+			<figure>
+				<img src="assets/img/coffee.jpg" alt="Бариста наливає фільтр-каву в керамічну чашку ручної роботи на дерев'яній стійці" loading="lazy" width="896" height="1200">
+				<figcaption class="coffee-caption">Фільтр дня. Чашка — з жовтневого випалу.</figcaption>
+			</figure>
+		</div>
+	</div>
+</section>
+
+<!-- ============ 07 FAQ ============ -->
+<section class="section" id="faq" aria-labelledby="faqTitle">
+	<div class="wrap faq-grid">
+		<div class="faq-intro">
+			<p class="sec-label">07 / FAQ</p>
+			<h2 class="sec-title serif" id="faqTitle">Часті питання</h2>
+			<p class="faq-note">Не знайшли відповідь? Напишіть нам в <a href="https://www.instagram.com/hlyna.studio" target="_blank" rel="noopener">Instagram</a> або подзвоніть: <a href="tel:+380685120437">+38 068 512 04 37</a>.</p>
+		</div>
+		<div class="faq-list">
+			<div class="faq-item">
+				<h3><button type="button" class="faq-q" id="faqQ1" aria-expanded="false" aria-controls="faqA1"><span>Чи можна без досвіду?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+				<div class="faq-a" id="faqA1" role="region" aria-labelledby="faqQ1"><div class="faq-a-inner"><p>Так. «Перша чашка», «Гончарне коло» та «Ліплення для двох» розраховані саме на людей, які ніколи не торкалися глини. Майстер показує кожен крок, а «зіпсувати» глину неможливо — її завжди можна зім'яти й почати знову.</p></div></div>
+			</div>
+			<div class="faq-item">
+				<h3><button type="button" class="faq-q" id="faqQ2" aria-expanded="false" aria-controls="faqA2"><span>Коли забирати готову роботу?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+				<div class="faq-a" id="faqA2" role="region" aria-labelledby="faqQ2"><div class="faq-a-inner"><p>Орієнтовно через 14–21 день після заняття: виріб має висохнути, пройти перший випал, вкритися поливою і випалитися вдруге. Коли річ готова, ми пишемо в Instagram або телефонуємо. Зберігаємо роботи до трьох місяців.</p></div></div>
+			</div>
+			<div class="faq-item">
+				<h3><button type="button" class="faq-q" id="faqQ3" aria-expanded="false" aria-controls="faqA3"><span>Чи входить випал у вартість?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+				<div class="faq-a" id="faqA3" role="region" aria-labelledby="faqQ3"><div class="faq-a-inner"><p>Так. У ціну кожної майстерні вже входять глина, обидва випали, базові поливи та інструменти. Доплатити доведеться хіба за додатковий виріб понад програму — 150 ₴ за випал кожної зайвої речі.</p></div></div>
+			</div>
+			<div class="faq-item">
+				<h3><button type="button" class="faq-q" id="faqQ4" aria-expanded="false" aria-controls="faqA4"><span>Чи можна прийти з дитиною?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+				<div class="faq-a" id="faqA4" role="region" aria-labelledby="faqQ4"><div class="faq-a-inner"><p>Дітям від 8 років буде комфортно у форматі «Ліплення для двох» разом із дорослим. Окремих дитячих груп поки не ведемо: у майстерні гарячі печі й обмежена кількість місць, тому дитина працює поруч із вами.</p></div></div>
+			</div>
+			<div class="faq-item">
+				<h3><button type="button" class="faq-q" id="faqQ5" aria-expanded="false" aria-controls="faqA5"><span>Що буде, якщо я не зможу прийти?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+				<div class="faq-a" id="faqA5" role="region" aria-labelledby="faqQ5"><div class="faq-a-inner"><p>Попередьте нас щонайменше за 24 години — і ми безкоштовно перенесемо запис на будь-яку іншу дату з розкладу. Якщо попередити пізніше, разово перенесемо і так, але вдруге вже попросимо забронювати заново.</p></div></div>
+			</div>
+			<div class="faq-item">
+				<h3><button type="button" class="faq-q" id="faqQ6" aria-expanded="false" aria-controls="faqA6"><span>Чи можна подарувати майстерню?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+				<div class="faq-a" id="faqA6" role="region" aria-labelledby="faqQ6"><div class="faq-a-inner"><p>Так, це один із найчастіших сценаріїв. Забронюйте будь-який формат і напишіть у коментарі «подарунок» — ми підготуємо паперовий сертифікат, який можна забрати в студії або отримати фото для листівки. Сертифікат діє три місяці.</p></div></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ============ 08 КОНТАКТИ ============ -->
+<section class="section" id="kontakty" aria-labelledby="kontaktyTitle">
+	<div class="wrap">
+		<header class="sec-head">
+			<p class="sec-label">08 / Контакти</p>
+			<h2 class="sec-title serif" id="kontaktyTitle">Як нас знайти</h2>
+		</header>
+		<div class="contacts-grid">
+			<div class="contacts-info">
+				<address class="contacts-address">
+					<p class="contacts-street serif">вул. Ольги Кобилянської, 19<br>Чернівці, 58000</p>
+					<p>Перший поверх, вхід із двору. Орієнтир — синя дерев'яна брама з керамічною табличкою.</p>
+				</address>
+				<table class="hours-table">
+					<caption class="visually-hidden">Години роботи студії</caption>
+					<tbody>
+						<tr><th scope="row">Пн</th><td>вихідний — день випалу</td></tr>
+						<tr><th scope="row">Вт–Пт</th><td>10:00–20:00</td></tr>
+						<tr><th scope="row">Сб–Нд</th><td>11:00–19:00</td></tr>
+					</tbody>
+				</table>
+				<ul class="contacts-links">
+					<li><a href="tel:+380685120437">+38 068 512 04 37</a></li>
+					<li><a href="mailto:pryvit@hlyna.studio">pryvit@hlyna.studio</a></li>
+					<li><a href="https://www.instagram.com/hlyna.studio" target="_blank" rel="noopener">Instagram: @hlyna.studio</a></li>
+				</ul>
+				<a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D1%86%D1%96%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9E%D0%BB%D1%8C%D0%B3%D0%B8%20%D0%9A%D0%BE%D0%B1%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D1%97" target="_blank" rel="noopener">Прокласти маршрут</a>
+			</div>
+			<figure class="contacts-map">
+				<iframe class="map-embed" src="https://www.google.com/maps?q=%D0%B2%D1%83%D0%BB.%20%D0%9E%D0%BB%D1%8C%D0%B3%D0%B8%20%D0%9A%D0%BE%D0%B1%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D1%97%2C%2019%2C%20%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D1%86%D1%96&z=16&output=embed" title="Мапа: вулиця Ольги Кобилянської, 19, Чернівці" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+				<figcaption class="map-caption">Ми у самому центрі, за пʼять хвилин пішки від площі Ринок. Точний маршрут підкаже кнопка ліворуч.</figcaption>
+			</figure>
+		</div>
+	</div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+	<div class="wrap">
+		<div class="footer-grid">
+			<div class="footer-brand">
+				<p class="footer-wordmark serif">HLYNA</p>
+				<p class="footer-tag">Керамічна майстерня та повільна кава.<br>Чернівці, вул. Ольги Кобилянської, 19.</p>
+			</div>
+			<nav class="footer-nav" aria-label="Навігація у футері">
+				<ul>
+					<li><a href="#maisterni">Майстерні</a></li>
+					<li><a href="#rozklad">Розклад</a></li>
+					<li><a href="#prostir">Простір</a></li>
+					<li><a href="#kava">Кава</a></li>
+					<li><a href="#faq">FAQ</a></li>
+					<li><a href="#kontakty">Контакти</a></li>
+				</ul>
+			</nav>
+			<div class="footer-meta">
+				<p><a href="tel:+380685120437">+38 068 512 04 37</a><br><a href="mailto:pryvit@hlyna.studio">pryvit@hlyna.studio</a><br><a href="https://www.instagram.com/hlyna.studio" target="_blank" rel="noopener">@hlyna.studio</a></p>
+				<button type="button" class="footer-privacy-btn" id="privacyBtn">Приватність</button>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>© <span id="footerYear">2026</span> HLYNA. Концепт-проєкт для портфоліо. Бренд HLYNA є вигаданим, адреса й контакти — теж.</p>
+			<p>Розробка — <a href="https://www.instagram.com/yura.codes/" target="_blank" rel="noopener">yura.codes</a></p>
+		</div>
+	</div>
+</footer>
+
+<!-- ============ DRAWER ============ -->
+<div class="overlay" id="drawerOverlay" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+	<div class="drawer-head">
+		<div>
+			<p class="drawer-kicker" id="drawerKicker"></p>
+			<h2 class="drawer-title serif" id="drawerTitle"></h2>
+		</div>
+		<button type="button" class="icon-btn" id="drawerClose" aria-label="Закрити">×</button>
+	</div>
+	<div class="drawer-body" id="drawerBody"></div>
+</aside>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Перегляд зображення" hidden>
+	<button type="button" class="icon-btn lb-close" id="lbClose" aria-label="Закрити (Esc)">×</button>
+	<button type="button" class="icon-btn lb-prev" id="lbPrev" aria-label="Попереднє зображення">←</button>
+	<figure class="lb-figure">
+		<img id="lbImg" src="" alt="">
+		<figcaption id="lbCaption"></figcaption>
+	</figure>
+	<button type="button" class="icon-btn lb-next" id="lbNext" aria-label="Наступне зображення">→</button>
+</div>
+
+<!-- ============ PRIVACY MODAL ============ -->
+<div class="overlay" id="privacyOverlay" hidden></div>
+<div class="modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle" hidden>
+	<div class="modal-head">
+		<h2 class="serif" id="privacyTitle">Приватність</h2>
+		<button type="button" class="icon-btn" id="privacyClose" aria-label="Закрити">×</button>
+	</div>
+	<div class="modal-body">
+		<p>Це демонстраційний сайт для портфоліо. Жодні дані нікуди не надсилаються і не потрапляють на сервер — серверної частини тут просто немає.</p>
+		<p>Коли ви оформлюєте демо-бронювання, введені ім'я, телефон і коментар зберігаються лише у localStorage вашого браузера, щоб працював розділ «Мій запис». Вони зникнуть, якщо скасувати запис або очистити дані сайту в налаштуваннях браузера.</p>
+		<p>Сайт не використовує cookie, аналітику чи сторонні трекери.</p>
+	</div>
+</div>
+
+<noscript><p class="noscript-note">Для розкладу, фільтрів і демо-бронювання потрібен увімкнений JavaScript. Контакти й меню доступні і без нього.</p></noscript>
+
+<script src="app.js" defer></script>
+</body>
+</html>
