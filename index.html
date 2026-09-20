@@ -528,20 +528,28 @@
 			<p class="drawer-kicker" id="drawerKicker"></p>
 			<h2 class="drawer-title serif" id="drawerTitle"></h2>
 		</div>
-		<button type="button" class="icon-btn" id="drawerClose" aria-label="Закрити">×</button>
+		<button type="button" class="icon-btn" id="drawerClose" aria-label="Закрити">
+			<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+		</button>
 	</div>
 	<div class="drawer-body" id="drawerBody"></div>
 </aside>
 
 <!-- ============ LIGHTBOX ============ -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Перегляд зображення" hidden>
-	<button type="button" class="icon-btn lb-close" id="lbClose" aria-label="Закрити (Esc)">×</button>
-	<button type="button" class="icon-btn lb-prev" id="lbPrev" aria-label="Попереднє зображення">←</button>
+	<button type="button" class="icon-btn lb-close" id="lbClose" aria-label="Закрити (Esc)">
+		<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+	</button>
+	<button type="button" class="icon-btn lb-prev" id="lbPrev" aria-label="Попереднє зображення">
+		<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m11 5-7 7 7 7M4 12h16"></path></svg>
+	</button>
 	<figure class="lb-figure">
 		<img id="lbImg" src="" alt="">
 		<figcaption id="lbCaption"></figcaption>
 	</figure>
-	<button type="button" class="icon-btn lb-next" id="lbNext" aria-label="Наступне зображення">→</button>
+	<button type="button" class="icon-btn lb-next" id="lbNext" aria-label="Наступне зображення">
+		<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m13 5 7 7-7 7M4 12h16"></path></svg>
+	</button>
 </div>
 
 <!-- ============ PRIVACY MODAL ============ -->
@@ -549,7 +557,9 @@
 <div class="modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle" hidden>
 	<div class="modal-head">
 		<h2 class="serif" id="privacyTitle">Приватність</h2>
-		<button type="button" class="icon-btn" id="privacyClose" aria-label="Закрити">×</button>
+		<button type="button" class="icon-btn" id="privacyClose" aria-label="Закрити">
+			<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+		</button>
 	</div>
 	<div class="modal-body">
 		<p>Це демонстраційний сайт для портфоліо. Жодні дані нікуди не надсилаються і не потрапляють на сервер — серверної частини тут просто немає.</p>

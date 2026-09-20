@@ -140,9 +140,22 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 	align-items: center;
 	justify-content: center;
 	width: 44px; height: 44px;
+	padding: 0;
+	line-height: 0;
 	border: 1px solid var(--line);
 	border-radius: 6px;
 	transition: border-color .18s, background-color .18s;
+}
+.icon-btn svg {
+	display: block;
+	flex: 0 0 auto;
+	width: 20px;
+	height: 20px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
 }
 .icon-btn:hover { border-color: var(--ink); }
 
@@ -1213,6 +1226,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 	border-color: rgba(242, 238, 229, 0.4);
 	background: rgba(24, 23, 21, 0.5);
 }
+.lightbox .icon-btn svg { width: 22px; height: 22px; }
 .lightbox .icon-btn:hover { border-color: #F2EEE5; }
 .lb-close { top: 20px; right: 20px; }
 .lb-prev { left: 16px; top: 50%; transform: translateY(-50%); }
